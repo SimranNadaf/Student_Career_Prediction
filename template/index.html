@@ -1,0 +1,309 @@
+{% block title %}Prediction{% endblock title %}
+
+{% block body %}
+
+<div class="container" style="text-align: center;">
+    <form action="predict" method="post">
+        {% csrf_token %}
+    <h1>Student Career Prediction Test</h1>
+    <div>
+        <b><label>1. Drawing</label></b><br>
+        <input type="radio" id="css" name="Drawing" value="1">Yes
+        <input type="radio" id="css" name="Drawing" value="0">No
+    </div>
+    <div>
+        <b><label>2. Dancing</label></b><br>
+        <input type="radio" id="css" name="Dancing" value="1">Yes
+        <input type="radio" id="css" name="Dancing" value="0">No
+    </div>
+    <div>
+        <b><label>3. Singing</label></b><br>
+        <input type="radio" id="css" name="Singing" value="1">Yes
+        <input type="radio" id="css" name="Singing" value="0">No
+    </div>
+    <div>
+        <b><label>4. Sports</label></b><br>
+        <input type="radio" id="css" name="Sports" value="1">Yes
+        <input type="radio" id="css" name="Sports" value="0">No
+    </div>
+    <div>
+        <b><label>5. Video Game</label></b><br>
+        <input type="radio" id="css" name="Video_Game" value="1">Yes
+        <input type="radio" id="css" name="Video_Game" value="0">No
+    </div>
+    <div>
+        <b><label>6. Acting</label></b><br>
+        <input type="radio" id="css" name="Acting" value="1">Yes
+        <input type="radio" id="css" name="Acting" value="0">No
+    </div>
+    <div>
+        <b><label>7. Travelling</label></b><br>
+        <input type="radio" id="css" name="Travelling" value="1">Yes
+        <input type="radio" id="css" name="Travelling" value="0">No
+    </div>
+    <div>
+        <b><label>8. Gardening</label></b><br>
+        <input type="radio" id="css" name="Gardening" value="1">Yes
+        <input type="radio" id="css" name="Gardening" value="0">No
+    </div>
+    <div>
+        <b><label>9. Animals</label></b><br>
+        <input type="radio" id="css" name="Animals" value="1">Yes
+        <input type="radio" id="css" name="Animals" value="0">No
+    </div>
+    <div>
+        <b><label>10. Photography</label></b><br>
+        <input type="radio" id="css" name="Photography" value="1">Yes
+        <input type="radio" id="css" name="Photography" value="0">No
+    </div>
+    <div>
+        <b><label>11. Teaching</label></b><br>
+        <input type="radio" id="css" name="Teaching" value="1">Yes
+        <input type="radio" id="css" name="Teaching" value="0">No
+    </div>
+    <div>
+        <b><label>12. Exercise</label></b><br>
+        <input type="radio" id="css" name="Exercise" value="1">Yes
+        <input type="radio" id="css" name="Exercise" value="0">No
+    </div>
+    <div>
+        <b><label>13. Coding</label></b><br>
+        <input type="radio" id="css" name="Coding" value="1">Yes
+        <input type="radio" id="css" name="Coding" value="0">No
+    </div>
+    <div>
+        <b><label>14. Electricity Components</label></b><br>
+        <input type="radio" id="css" name="Electricity_Components" value="1">Yes
+        <input type="radio" id="css" name="Electricity_Components" value="0">No
+    </div>
+    <div>
+        <b><label>15. Mechanic Parts</label></b><br>
+        <input type="radio" id="css" name="Mechanic_Parts" value="1">Yes
+        <input type="radio" id="css" name="Mechanic_Parts" value="0">No
+    </div>
+    <div>
+        <b><label>16. Computer Parts</label></b><br>
+        <input type="radio" id="css" name="Computer_Parts" value="1">Yes
+        <input type="radio" id="css" name="Computer_Parts" value="0">No
+    </div>
+    <div>
+        <b><label>17. Researching</label></b><br>
+        <input type="radio" id="css" name="Researching" value="1">Yes
+        <input type="radio" id="css" name="Researching" value="0">No
+    </div>
+    <div>
+        <b><label>18. Architecture</label></b><br>
+        <input type="radio" id="css" name="Architecture" value="1">Yes
+        <input type="radio" id="css" name="Architecture" value="0">No
+    </div>
+    <div>
+        <b><label>19. Historic Collection</label></b><br>
+        <input type="radio" id="css" name="Historic_Collection" value="1">Yes
+        <input type="radio" id="css" name="Historic_Collection" value="0">No
+    </div>
+    <div>
+        <b><label>20. Botany</label></b><br>
+        <input type="radio" id="css" name="Botany" value="1">Yes
+        <input type="radio" id="css" name="Botany" value="0">No
+    </div>
+    <div>
+        <b><label>21. Zoology</label></b><br>
+        <input type="radio" id="css" name="Zoology" value="1">Yes
+        <input type="radio" id="css" name="Zoology" value="0">No
+    </div>
+    <div>
+        <b><label>22. Physics</label></b><br>
+        <input type="radio" id="css" name="Physics" value="1">Yes
+        <input type="radio" id="css" name="Physics" value="0">No
+    </div>
+    <div>
+        <b><label>23. Accounting</label></b><br>
+        <input type="radio" id="css" name="Accounting" value="1">Yes
+        <input type="radio" id="css" name="Accounting" value="0">No
+    </div>
+    <div>
+        <b><label>24. Economics</label></b><br>
+        <input type="radio" id="css" name="Economics" value="1">Yes
+        <input type="radio" id="css" name="Economics" value="0">No
+    </div>
+    <div>
+        <b><label>25. Sociology</label></b><br>
+        <input type="radio" id="css" name="Sociology" value="1">Yes
+        <input type="radio" id="css" name="Sociology" value="0">No
+    </div>
+    <div>
+        <b><label>26. Geography</label></b><br>
+        <input type="radio" id="css" name="Geography" value="1">Yes
+        <input type="radio" id="css" name="Geography" value="0">No
+    </div>
+    <div>
+        <b><label>27. Psycology</label></b><br>
+        <input type="radio" id="css" name="Psycology" value="1">Yes
+        <input type="radio" id="css" name="Psycology" value="0">No
+    </div>
+    <div>
+        <b><label>28. History</label></b><br>
+        <input type="radio" id="css" name="History" value="1">Yes
+        <input type="radio" id="css" name="History" value="0">No
+    </div>
+    <div>
+        <b><label>29. Science</label></b><br>
+        <input type="radio" id="css" name="Science" value="1">Yes
+        <input type="radio" id="css" name="Science" value="0">No
+    </div>
+    <div>
+        <b><label>30. Bussiness Education</label></b><br>
+        <input type="radio" id="css" name="Bussiness_Education" value="1">Yes
+        <input type="radio" id="css" name="Bussiness_Education" value="0">No
+    </div>
+    <div>
+        <b><label>31. Chemistry</label></b><br>
+        <input type="radio" id="css" name="Chemistry" value="1">Yes
+        <input type="radio" id="css" name="Chemistry" value="0">No
+    </div>
+    <div>
+        <b><label>32. Mathematics</label></b><br>
+        <input type="radio" id="css" name="Mathematics" value="1">Yes
+        <input type="radio" id="css" name="Mathematics" value="0">No
+    </div>
+    <div>
+        <b><label>33. Biology</label></b><br>
+        <input type="radio" id="css" name="Biology" value="1">Yes
+        <input type="radio" id="css" name="Biology" value="0">No
+    </div>
+    <div>
+        <b><label>34. Makeup</label></b><br>
+        <input type="radio" id="css" name="Makeup" value="1">Yes
+        <input type="radio" id="css" name="Makeup" value="0">No
+    </div>
+    <div>
+        <b><label>35. Designing</label></b><br>
+        <input type="radio" id="css" name="Designing" value="1">Yes
+        <input type="radio" id="css" name="Designing" value="0">No
+    </div>
+    <div>
+        <b><label>36. Content writing</label></b><br>
+        <input type="radio" id="css" name="Content_writing" value="1">Yes
+        <input type="radio" id="css" name="Content_writing" value="0">No
+    </div>
+    <div>
+        <b><label>37. Crafting</label></b><br>
+        <input type="radio" id="css" name="Crafting" value="1">Yes
+        <input type="radio" id="css" name="Crafting" value="0">No
+    </div>
+    <div>
+        <b><label>38. Literature</label></b><br>
+        <input type="radio" id="css" name="Literature" value="1">Yes
+        <input type="radio" id="css" name="Literature" value="0">No
+    </div>
+    <div>
+        <b><label>39. Reading</label></b><br>
+        <input type="radio" id="css" name="Reading" value="1">Yes
+        <input type="radio" id="css" name="Reading" value="0">No
+    </div>
+    <div>
+        <b><label>40. Cartooning</label></b><br>
+        <input type="radio" id="css" name="Cartooning" value="1">Yes
+        <input type="radio" id="css" name="Cartooning" value="0">No
+    </div>
+    <div>
+        <b><label>41. Debating</label></b><br>
+        <input type="radio" id="css" name="Debating" value="1">Yes
+        <input type="radio" id="css" name="Debating" value="0">No
+    </div>
+    <div>
+        <b><label>42. Asrtology</label></b><br>
+        <input type="radio" id="css" name="Asrtology" value="1">Yes
+        <input type="radio" id="css" name="Asrtology" value="0">No
+    </div>
+    <div>
+        <b><label>43. Hindi</label></b><br>
+        <input type="radio" id="css" name="Hindi" value="1">Yes
+        <input type="radio" id="css" name="Hindi" value="0">No
+    </div>
+    <div>
+        <b><label>44. French</label></b><br>
+        <input type="radio" id="css" name="French" value="1">Yes
+        <input type="radio" id="css" name="French" value="0">No
+    </div>
+    <div>
+        <b><label>45. English</label></b><br>
+        <input type="radio" id="css" name="English" value="1">Yes
+        <input type="radio" id="css" name="English" value="0">No
+    </div>
+    <div>
+        <b><label>46. Urdu</label></b><br>
+        <input type="radio" id="css" name="Urdu" value="1">Yes
+        <input type="radio" id="css" name="Urdu" value="0">No
+    </div>
+    <div>
+        <b><label>47. Other Language</label></b><br>
+        <input type="radio" id="css" name="Other_Language" value="1">Yes
+        <input type="radio" id="css" name="Other_Language" value="0">No
+    </div>
+    <div>
+        <b><label>48. Solving Puzzles</label></b><br>
+        <input type="radio" id="css" name="Solving_Puzzles" value="1">Yes
+        <input type="radio" id="css" name="Solving_Puzzles" value="0">No
+    </div>
+    <div>
+        <b><label>49. Gymnastics</label></b><br>
+        <input type="radio" id="css" name="Gymnastics" value="1">Yes
+        <input type="radio" id="css" name="Gymnastics" value="0">No
+    </div>
+    <div>
+        <b><label>50. Yoga</label></b><br>
+        <input type="radio" id="css" name="Yoga" value="1">Yes
+        <input type="radio" id="css" name="Yoga" value="0">No
+    </div>
+    <div>
+        <b><label>51. Engeeniering</label></b><br>
+        <input type="radio" id="css" name="Engeeniering" value="1">Yes
+        <input type="radio" id="css" name="Engeeniering" value="0">No
+    </div>
+    <div>
+        <b><label>52. Doctor</label></b><br>
+        <input type="radio" id="css" name="Doctor" value="1">Yes
+        <input type="radio" id="css" name="Doctor" value="0">No
+    </div>
+    <div>
+        <b><label>53. Pharmisist</label></b><br>
+        <input type="radio" id="css" name="Pharmisist" value="1">Yes
+        <input type="radio" id="css" name="Pharmisist" value="0">No
+    </div>
+    <div>
+        <b><label>54. Cycling</label></b><br>
+        <input type="radio" id="css" name="Cycling" value="1">Yes
+        <input type="radio" id="css" name="Cycling" value="0">No
+    </div>
+    <div>
+        <b><label>55. Knitting</label></b><br>
+        <input type="radio" id="css" name="Knitting" value="1">Yes
+        <input type="radio" id="css" name="Knitting" value="0">No
+    </div>
+    <div>
+        <b><label>56. Director</label></b><br>
+        <input type="radio" id="css" name="Director" value="1">Yes
+        <input type="radio" id="css" name="Director" value="0">No
+    </div>
+    <div>
+        <b><label>57. Journalism</label></b><br>
+        <input type="radio" id="css" name="Journalism" value="1">Yes
+        <input type="radio" id="css" name="Journalism" value="0">No
+    </div>
+    <div>
+        <b><label>58. Bussiness</label></b><br>
+        <input type="radio" id="css" name="Bussiness" value="1">Yes
+        <input type="radio" id="css" name="Bussiness" value="0">No
+    </div>
+    <div>
+        <b><label>59. Listening Music</label></b><br>
+        <input type="radio" id="css" name="Listening_Music" value="1">Yes
+        <input type="radio" id="css" name="Listening_Music" value="0">No
+    </div>
+    <center>
+        <input type="submit" class="form-control" style="background-color: blueviolet; color: white; width: 30%;" value="Predict">
+    </center>
+</>
+</div>
+{% endblock body %}
